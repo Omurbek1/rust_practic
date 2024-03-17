@@ -12,6 +12,8 @@ fn main() {
     many_condition();
     println!("----------While functions---------------");
     while_functions();
+    println!("----------For functions---------------");
+    for_functions();
 }
 
 fn many_condition() {
@@ -38,4 +40,11 @@ fn while_functions() {
         println!("the value is: {}", a[index]);
         index += 1;
     }
+}
+
+fn for_functions(){
+    for number in (1..4).rev() {
+        println!("{}!", number);
+    }
+    println!("LIFTOFF!!!");
 }
