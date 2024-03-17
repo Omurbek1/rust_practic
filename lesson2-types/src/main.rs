@@ -33,4 +33,42 @@ fn main() {
     println!("isize max: {}", isize::MAX);
     println!("usize min: {}", usize::MIN);
     println!("usize max: {}", usize::MAX);
+
+    println!("{} {} {}", "---------", "--------", "!");
+    symbol();
+    println!("{} {} {}", "Arrays---------", "--------", "!");
+    arrays();
+}
+
+fn symbol(){
+    let _a:char = 'a';
+    let z='a';
+    let heart_eyed_cat = '😻';
+    println!("a: {}", _a);
+    println!("z: {}", z);
+    println!("heart_eyed_cat: {}", heart_eyed_cat);
+}
+
+fn arrays(){
+    let a=[1,2,3,4,5];
+    let b:[i32;5] = [1,2,3,4,5];
+    println!("a: {:?}", a);
+    println!("b: {:?}", b);
+
+    let months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+    ]
+    .to_vec();
+    println!("months: {:?}", months);
 }
