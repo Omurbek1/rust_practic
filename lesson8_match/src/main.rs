@@ -24,6 +24,19 @@ fn value_in_cents(coin: Coin) -> u32 {
         }
     }
 }
+
+fn plu_one(x: Option<i32>) -> Option<i32> {
+    match x {
+        None => None,
+        Some(i) => Some(i + 1),
+    }
+}
 fn main() {
     value_in_cents(Coin::Quarter(UsState::Alabama));
+    let five = Some(5);
+    let six = plu_one(five);
+    let none = plu_one(None);
+    println!("{:?}", six.unwrap());
+    println!("{:?}", none);
+    println!("{:?}", five.unwrap());
 }
